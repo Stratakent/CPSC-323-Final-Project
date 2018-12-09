@@ -23,7 +23,7 @@ bool IsValidString(std::string word) {
 	return true;
 }
 
-void Parse(std::ifstream& in_file, std::ofstream& o_file) {
+void ParseTextFile(std::ifstream& in_file, std::ofstream& o_file) {
 	o_file.open("finalp2.txt");
 	std::string input_text;
 
@@ -94,17 +94,18 @@ void Parse(std::ifstream& in_file, std::ofstream& o_file) {
 
 	// Write to file.
 	o_file << output;
+	o_file.close();
 }
 
-int main() {
-
-	std::ifstream in_file("finalp1.txt");
-	std::ofstream o_file;
-
-	Parse(in_file, o_file);
-
-	std::cin.ignore();
-	std::cin.get();
-
-	return 0;
-}
+//int main() {
+//
+//	std::ifstream in_file("finalp1.txt");
+//	std::ofstream o_file;
+//
+//	Parse(in_file, o_file);
+//
+//	std::cin.ignore();
+//	std::cin.get();
+//
+//	return 0;
+//}
