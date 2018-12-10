@@ -405,13 +405,16 @@ bool Language::parse(string filename) {
 				// TODO if we reach an identify check that it isnt a reserved word and that it uses all valid letters and symbols
 
 
-				/*else if (state == 'a' || state == '+' || state == '-' || state == '*' || state == '/' || state == '(' || state == ')' || state == '$') {
+				/*
+				//Brian: modified the check for nonterminals on the table.
+				else if (state == "a" || state == "b" || state == "c" || state == "d" || state == "e" || state == "," || state == ":" || state == ";" || state == "=" || state == "+" || state == "-" || state == "*" || state == "/" || state == "(" || state == ")" || state == "$") {
+				//check the state.
 				check = state;
-				if (check != word[i]) {
-				cout << "Expected a " << check << " at this position.\n";
-				return false;
+				if (state != word[i]) {
+					cout << "Expected a " << check << " at this position.\n";
+					return false; //kick out of the parsing
 				}
-				cout << word[i] << " matches " << check << endl;
+				cout << word[i] << " matches " << check << endl;//table is parsed successfully.
 				}*/
 			} while (check != curr_word);
 		}
