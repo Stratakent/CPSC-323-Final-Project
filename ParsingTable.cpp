@@ -156,9 +156,9 @@ bool Language::parse(string filename) {
 					c == '(' || c == ')' || c == '+' || c == '*' || c == '/' ||
 					find(chars.begin(), chars.end(), c) != chars.end()) && c == curr_word[0])
 				{
+					// read from string
 					curr_word.erase(0, 1);
 				}
-
 				// If state is non-terminal
 				else if (state == "P" || state == "J" || state == "K" || state == "V" || state == "U" || state == "B" || state == "X" || state == "Y" || state == "H" || state == "Z" || state == "W" || state == "A" || state == "E" || state == "Q" || state == "T" || state == "R" || state == "F" || state == "N" || state == "M" || state == "S" || state == "D" || state == "L") {
 					int x = m.find(state)->second;
